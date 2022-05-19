@@ -10,7 +10,7 @@
 
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <%= form_for(:confirm, url: confirm_path) do |f| %>
+      <%= form_for(:confirm, url: confirm_path, authenticity_token: false) do |f| %>
         <br />
         <%= f.hidden_field :user, :value => Base64.encode64(Marshal.dump(@new_user)) %>
         <%= f.label "Confirmation Code" %>

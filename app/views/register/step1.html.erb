@@ -6,7 +6,7 @@
   <br />
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <%= form_with(url: register_path) do |f| %>
+      <%= form_with(url: register_path, authenticity_token: false) do |f| %>
 
         <%= f.label "Account Number" %>
         <%= f.text_field :account_number, class: 'form-control' %>
