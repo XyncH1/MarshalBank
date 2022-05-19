@@ -1,22 +1,24 @@
 <% provide(:title, "Confirm Code") %>
-<h1>Enter Confirmation Code</h1>
+<div class="MessageBlock">
+  <h1>Confirmation Code</h1>
 
-<% pp(@new_user) %>
+  <% pp(@new_user) %>
 
-<h2>Hello <%= @new_user.full_name %></h2>
+  <h2>Hello <%= @new_user.full_name %></h2>
 
-Please enter the confirmation code sent to the email address on record.
+  Please enter the confirmation code sent to the email address on record.
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:confirm, url: confirm_path) do |f| %>
-      <br />
-      <%= f.hidden_field :user, :value => Base64.encode64(Marshal.dump(@new_user)) %>
-      <%= f.label "Confirmation Code" %>
-      <%= f.text_field :confirmation_code, class: 'form-control' %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:confirm, url: confirm_path) do |f| %>
+        <br />
+        <%= f.hidden_field :user, :value => Base64.encode64(Marshal.dump(@new_user)) %>
+        <%= f.label "Confirmation Code" %>
+        <%= f.text_field :confirmation_code, class: 'form-control' %>
 		<br />
-      <%= f.submit "Submit Confirmation Code", class: "btn btn-primary" %>
-    <% end %>
+        <%= f.submit "Submit Confirmation Code", class: "btn btn-primary" %>
+      <% end %>
 
+    </div>
   </div>
 </div>

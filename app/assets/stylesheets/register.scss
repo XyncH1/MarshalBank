@@ -1,3 +1,15 @@
 // Place all the styles related to the Register controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.MessageBlock {
+        position: relative;
+        top: 20vh;
+        left: 30vw;
+        width: 30vw;
+        padding: 5vw;
+        border-width: 1px;
+        border-style: solid;
+        text-align: center;
+        background-color: #5478b3;
+        text-align: center;
+}

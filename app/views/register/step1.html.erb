@@ -1,21 +1,25 @@
 <% provide(:title, "Account Registration") %>
-<h1>Account Registration</h1>
+<div class="MessageBlock">
+  <h1>Account Registration</h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_with(url: register_path) do |f| %>
+  Please enter the details associated with your existing bank account.<br />
+  <br />
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_with(url: register_path) do |f| %>
 
-      <%= f.label "Account Number" %>
-      <%= f.text_field :account_number, class: 'form-control' %>
+        <%= f.label "Account Number" %>
+        <%= f.text_field :account_number, class: 'form-control' %>
 		<br />
-      <%= f.label "Full Legal Name" %>
-      <%= f.text_field :full_name, class: 'form-control' %>
+        <%= f.label "Full Legal Name" %>
+        <%= f.text_field :full_name, class: 'form-control' %>
+ 		<br />
+        <%= f.label "Social Security Number" %>
+        <%= f.password_field :SSN, class: 'form-control' %>
 		<br />
-      <%= f.label "Social Security Number" %>
-      <%= f.password_field :SSN, class: 'form-control' %>
-		<br />
-      <%= f.submit "Proceed To Confirmation", class: "btn btn-primary" %>
-    <% end %>
+        <%= f.submit "Proceed To Confirmation", class: "btn btn-primary" %>
+      <% end %>
 
+    </div>
   </div>
 </div>
