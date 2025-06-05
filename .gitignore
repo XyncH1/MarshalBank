@@ -40,3 +40,7 @@ yarn-debug.log*
 .yarn-integrity
 
 /node_modules/*
+
+config/initializers/sentry.rb
+*.lock
+
